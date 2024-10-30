@@ -7,8 +7,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 
 </head>
+<style>
+    .hoh {
+      width: 400px;  /* Escala visual */
+      height: 600px; /* Escala visual */
+    }
+  </style>
 <body>
     <canvas class="canvas" width="400" height="700" id="nltb"></canvas>
+    <canvas class="canvas" width="400" height="700" id="overlay"></canvas>
+    <canvas class="hoh" width="400" height="700" id="hoh"></canvas>
     <canvas class="canvas" width="400" height="700" id="hashes"></canvas>
     <canvas class="canvas" width="400" height="700" id="backgrounds"></canvas>
     <canvas class="canvas" width="400" height="700" id="gap"></canvas>
@@ -22,6 +30,8 @@
 
 <script src="p5.min.js"></script>
 <script src="strings.js"></script>
+<script src="overlay.js"></script>
+<script src="hoh.js"></script>
 <script src="cosmic.js"></script>
 <script src="nltb.js"></script>
 <script src="hashes.js"></script>
