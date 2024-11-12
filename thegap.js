@@ -1,5 +1,4 @@
 
-(function () {
 function randomFromList(items){
     return items[Math.floor(Math.random()*items.length)];}
   
@@ -129,4 +128,3 @@ function randomFromList(items){
   
   
   
-})();

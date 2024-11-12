@@ -1,5 +1,5 @@
 
-(function () {
+
 function randomFromList(items){
     return items[Math.floor(Math.random()*items.length)];}
   
@@ -86,6 +86,6 @@ function randomFromList(items){
          rectangulo(x0,y0-random(2,15),width*2,random(5,50),lg)
      }
 
-    })();
+
 
      
