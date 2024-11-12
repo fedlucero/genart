@@ -1,10 +1,13 @@
-(function () {
+
 var canvas = document.getElementById('overlay');
 var ctx = canvas.getContext('2d');
 
 function random(min, max) {
   return Math.floor((Math.random() * (max - min + 1)) + min);
 }
+function randomFromList(items){
+  return items[Math.floor(Math.random()*items.length)];
+  }
 
 
 const inY = canvas.height/8
@@ -13,7 +16,25 @@ const centerY = canvas.height / 2;
 
 
 
-const q = Math.floor(random(1,1.3))
+
+
+
+
+
+
+function ejecutar() {
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
+   generate()
+}
+
+
+
+
+
+function generate(){
+  const height= 700;
+
+  const q = Math.floor(random(1,1.3))
 
 const colors1 = ["#212529"]
 const colors2 = ["#2f0e07"]
@@ -56,9 +77,7 @@ const colors35 = ["#fffd5d"]
 const colors36 = ["#d3e6be"]
 
 
-function randomFromList(items){
-    return items[Math.floor(Math.random()*items.length)];
-    }
+
 
 
 
@@ -104,18 +123,6 @@ ys  = random(50,300)
 tams = random(30,150)
 def = Math.random()
 
-
-/*const botonBorrar = document.getElementById("reset");
-botonBorrar.addEventListener("click", limpiarCanvas);
-function limpiarCanvas() {
-   ctx.clearRect(0, 0, canvas.width, canvas.height);
-}*/
-
-
-generate()
-
-function generate(){
-
 if (Math.random()<0.5){
   createWater(colorAgua, 0.9, 2, h,a);
 createWater(colorAgua, 0.9, 2, i,b);
@@ -125,18 +132,19 @@ createOverlay(colorMonta1, 0.6, 2, l, e);
 createOverlay(colorMonta2, 0.6, 2, m, f);
 createOverlay(colorMonta3, 0.6, 3, n, g);
 createOverlay(colorSol, 0.6, 3,100,100);
+drawBackground()
 createSun()
 createSky()
 
 
 function drawBackground() {
-  var lg = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
+  var lg = ctx.createLinearGradient(0, 0, 0, 700);
   lg.addColorStop(0, `#ced4da`);
   lg.addColorStop(0.5, `#dee2e6`);
   lg.addColorStop(0.5, `#dee2e6`);
   lg.addColorStop(1, `#fff`);
   ctx.fillStyle = lg;
-  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  ctx.fillRect(0, 0, 400, 700);
 }
 
 function createSky() {
@@ -290,9 +298,10 @@ createOverlay(colorMonta1, 0.6, 2, l, e);
 createOverlay(colorMonta2, 0.6, 2, m, f);
 createOverlay(colorMonta3, 0.6, 3, n, g);
 createOverlay(colorSol, 0.6, 3,100,100);
+
 createSun()
 createSky()
-fxpreview()
+
 
 function drawBackground() {
   var lg = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
@@ -430,4 +439,3 @@ function createSun() {
   
   
   
-})();

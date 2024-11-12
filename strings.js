@@ -10,10 +10,16 @@ function randomFromList(items){
   }
 let x,y,tam
 
-function setup(){
-
-    
+function setup() {
     createCanvas(400,700)
+    generateStrin()}
+
+ 
+
+
+function generateStrin(){
+
+
 
    var windowHeight=700
     
@@ -70,9 +76,9 @@ function setup(){
    
 
     
-}
 
-function draw(){
+
+
 
     
     strokeWeight(1)
@@ -107,3 +113,4 @@ function draw(){
         rect(0,0,400,borde)
 
 }
+

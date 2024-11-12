@@ -43,7 +43,14 @@ function randomFromList(items){
     ctx.globalCompositeOperation = gco[a];
     ctx.globalAlpha =.55 
     ctx.filter = "blur(25px)";
-   
+
+
+    generatenltb()
+
+function generatenltb(){
+  
+  ctx.clearRect(-200, 0, 400, 700);
+
 
     var lg = ctx.createLinearGradient(0,0, width,0);
     lg.addColorStop(0, color1);
@@ -88,8 +95,8 @@ function randomFromList(items){
          rectangulo(x0,y0-random(2,15),width*2,random(5,50),lg)
      }
 
-     
-    
+    }
+   
 
      
 
